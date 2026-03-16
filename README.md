@@ -28,10 +28,26 @@ build/Debug/LightCorrespondence.exe
 ### 2. 运行方式
 
 - 命令行模式：直接带参数运行。
-- 交互模式：不带参数运行，程序会提示输入运行方式和传输内容。
+- 交互模式：不带参数运行，程序会提示输入运行方式和传输内容（这是一个逐步输入流程）。
 
 ```bash
 .\build\Debug\LightCorrespondence.exe
+```
+
+交互模式会依次提示：
+
+- 运行方式：`send` / `receive` / `simulate` / `decode-image`
+- 传输方案：`binary` / `octal`
+- 要传输的数字（仅 `send` 和 `simulate` 需要）
+- 图像路径（仅 `simulate` 和 `decode-image` 需要）
+
+示例（交互模式）：
+
+```text
+未检测到命令行参数，进入交互模式。
+请选择运行方式(send/receive/simulate/decode-image): send
+请选择传输方案(binary/octal): octal
+请输入要传输的数字: 6
 ```
 
 ### 3. 命令示例（PowerShell）
